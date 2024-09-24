@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/*NAV*/
+.navbar {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger-line {
+    width: 30px;
+    height: 3px;
+    background-color: #3d3d3d;
+    margin: 5px 0;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    color: #3d3d3d !important; 
+    letter-spacing: 2px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #3d3d3d;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.navbar-nav .nav-link {
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+/* Стилі для наведення на елементи a */
+.navbar-nav .nav-link:hover {
+    color: #39a38f; /* Змініть на власний колір */
+}
+
+/* Стилі для лінії при наведенні */
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #39a38f; /* Змініть на власний колір */
+    bottom: -22px;
+    left: 0;
+    transform: scaleX(0); /* Початково лінія невидима */
+    transition: transform 0.3s ease; /* Згладжує зміну видимості лінії */
+}
+
+/* Анімація для лінії при наведенні */
+.navbar-nav .nav-link:hover::after {
+    transform: scaleX(1); /* Розширення лінії при наведенні */
+}
+
+
+/* Медіа-запит для відображення бургер-меню на малих екранах */
+@media (max-width: 765px) {
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+}
+/*NAV*/
+/*carousel*/
+.carousel-control-prev-icon {
+    position: absolute;
+    margin-left: 20px;
+    top:35%;
+}
+.carousel-control-next-icon {
+    position: absolute;
+    margin-right: 20px;
+    top:35%;
+}   
+
+.carousel-item {
+
+    border-bottom:4px solid #fff ;
+    border-top: 4px solid #fff; 
+}
+
+
+.carousel-inner {
+    display: flex;
+    height: 100%;
+}
+.carousel-item {
+    text-align: center; /* Center the text horizontally */
+}
+
+.line{
+    background-color: #fff;
+    width: 100%;
+    height: 4px;
+    margin: 10px 0;
+}
+
+.carousel-item p {
+    color:#fff;
+    font-size: 40px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 0; /* Знищте зовнішній відступ нижче тексту */
+    padding-bottom: 5px; /* Знищте внутрішній відступ нижче тексту */
+    width: 100%;
+    transition-duration: 1s;
+}
+
+.hero {
+    padding-top: 90px;
+    background-color: #39a38f;
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 600px;
+}
+
+
+.carousel-indicators {
+    position: absolute;
+    top: 120%;
+    left: 35%;
+    transform: translateX(-50%);
+    z-index: 15;
+  }
+  
+  .carousel-indicators li {
+    background-color: #9cd1c7;
+    width: 30px;
+    height: 3px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .carousel-indicators li.active {
+    background-color: #fff;
+  }
+/*carousel*/
+
+/*about us*/
+
+.title{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.title h3,
+.title p {
+    width: 100%;
+}
+
+/*about us*/
+.colored-block {
+    position: relative;
+    height: 300px;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .block-content {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+  }
+  
+  .colored-block:hover .block-content {
+    opacity: 1;
+  }
+  
+  .row {
+    margin: 0;
+  }
+  
+  .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+.img-block{
+    width: 10%;
+}
+
+.green-line{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    height: 100px;
+}
+
+.green-line p {
+    font-weight: 500;
+    font-size: 30px;
+    margin: 0; /* Додано, щоб усунути зовнішні відступи, які можуть бути за замовчуванням */
+  }
+.green-line button
+{
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0 20px;
+    margin-left: 20px;
+    color: #fff;
+    background-color: #39a38f;
+    border: 1px solid #fff;
+    transition: 0.3s ease;
+}
+.green-line button:hover{
+    background-color: #fff;
+    color: #39a38f;
+}
+
+
+.workers-collague{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle{
+    margin: 10px 20px;
+    background-color: #39a38f;
+    color: #fff;
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    border: 10px solid #88c8bc;
+    transition: 0.5s ease;
+}
+
+.iside-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+  }
+  
+
+.circle:hover{
+    border: 10px solid #49aa98;
+}
+
+.circle:hover .iside-text {
+    opacity: 1;
+}
+
+.grey-line{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    background-color: #f2f2f1;
+    color: #000;
+    height: 120px;
+}
+.grey-line button{
+    margin-left: 60vh;
+    font-size: larger;
+    color: #39a38f;
+    border: #39a38f 2px solid;
+    background-color:#f2f2f1 ;
+    transition: 0.3s;
+}
+.grey-line button:hover{
+    background: #39a38f;
+    color: #f2f2f1;
+}
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.big-footer {
+    display: flex;
+    height: 300px;
+}
+
+.about-varden,
+.from-blog,
+.site-map,
+.footer-colague {
+    flex: 1;
+    padding: 20px; /* додайте відступи для кращого вигляду */
+}
+
+.about-varden {
+    color: #9b9b9b;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    
+}
+
+h3 {
+    color: #717171;
+}
+
+.from-blog {
+    color: #a6a6a6;
+    display: flex;
+    flex-direction: column;
+}
+
+.map-list {
+    color: #e4e4e3;
+    list-style-type: none;
+    
+}
+.white-box{
+    background-color: #fff; 
+    width: 4vw; 
+    height: 4vw;
+    margin: 5px;
+}
+
+.map-list li::before {
+    content: "> ";
+    color: #e4e4e3;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.small-footer{
+    display: flex;
+    background-color: #1c1c1c;
+    height: 50px; width: 100%; 
+    color: #5a5a5a;
+}
+.small-footer p{
+    justify-content: start;
+    margin-left: 10px;
+    margin-top: 12px;
+    width: 100%;
+}
+
+.images{
+    justify-content: end;
+    margin-top: 10px;
+    width: 190px;
+}
+
+
+.images img{
+    height: 30px; 
+    width: 30px
+}
